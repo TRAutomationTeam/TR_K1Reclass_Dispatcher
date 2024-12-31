@@ -1,0 +1,588 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1081.6,2262.4" sap2010:WorkflowViewState.IdRef="CloseAllApplications_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="518.4,2197.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="456,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
+    <TryCatch DisplayName="Try Catch-GoLog Off" sap:VirtualizedContainerService.HintSize="456,409.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GoSystem_LogOff.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="340.8,144" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Subprocess_ClientBinderCreation\Tax Softwares\GoSystem\GoSystem_LogOff.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,213.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Failed to logout GoSystem Gracefully&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <TryCatch DisplayName="Try Catch-CCH" sap:VirtualizedContainerService.HintSize="456,688" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CCH" sap:VirtualizedContainerService.HintSize="449.6,743.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" OpenMode="Never" ScopeGuid="bd11b472-0d8a-4101-bec1-d2bea619155b" Timeout="3" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,412" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="353.6,118.4" sap2010:WorkflowViewState.IdRef="Activate_5">
+                  <ui:Activate.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="cfadda42-d987-40eb-b6fe-07e1c7d7d892">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Activate.Target>
+                </ui:Activate>
+                <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="353.6,203.2" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" ScopeIdentifier="bd11b472-0d8a-4101-bec1-d2bea619155b" Shortcuts="[d(hk)][d(alt)][k(f4)][u(alt)][u(hk)]" Version="V3" />
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-9, -9, 1938, 1038" IconBase64="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" InformativeScreenshot="60464051d9bd007cb64c7b879c3997c3.png" Selector="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' omit:title='Return Manager' /&gt;" Title="Return Manager" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422.4,492" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="416,420.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="353.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Failed to close CCH gracefully&quot;]" />
+              <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill CCH Axcess" sap:VirtualizedContainerService.HintSize="353.6,157.6" sap2010:WorkflowViewState.IdRef="KillProcess_14" ProcessName="CCH.CommonUIFramework.Shell">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:KillProcess>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="CCH.CommonUIFramework.Shell">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:KillProcess>
+      </TryCatch.Finally>
+    </TryCatch>
+    <Sequence DisplayName="Closing Lacerte" sap:VirtualizedContainerService.HintSize="456,225.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch-Lacerte-22" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 Lacerte Individual Tax" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" OpenMode="Never" ScopeGuid="4b056393-ec56-47da-ade9-a34728f21aca" Timeout="3" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,294.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="387.2,86.4" sap2010:WorkflowViewState.IdRef="Activate_6">
+                    <ui:Activate.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a9684b4e-c84c-4152-bfe3-bd6a9c845f2b">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Activate.Target>
+                  </ui:Activate>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" ScopeIdentifier="4b056393-ec56-47da-ade9-a34728f21aca" Shortcuts="[d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]l[u(hk)][d(hk)]x[u(hk)]" Version="V3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NKeyboardShortcuts>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-10, -10, 1940, 1040" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAT9SURBVFhH1ZZbU1xVEIXPb3MG5gIowYQQxEjUB/0Dls8GCAIBckNCMMPVJFyM3EMgMUASwsAMUR/0yfLJy6NWyliVqt326u59zpmBEJLKg66qXVMFc6a/Wt299gn+V3o4cKR3c/BtevTlUcrn6l1+qIG2h0/Qzsg7VBhtouL4SXp8rTlnX3992viihu7zeXD5Ldq8csRtXqmjLYbYunqMtoeOu53hE25npDGE2P3qPXp8/RTZ46+utUvVhLPeV80A1S4GQZETx1w+d1ycKIw2usJYE+0KRDO7cYq+u/G+s597OX17oYruXcRRiI0+A+ivcYDgdjAIO3H1qFMnGmhnuIGdiNrBTjhAfP+yEHfOZ93d81UECJy1S1VOILwL/W+KEwIxWCdO+HZ4J4pjTU4gxrkd4sQHh2vJSm+GVs9liSHIQ3gnuBVuva+GQcog2AmFqBcn/GAWx941J046zMQL27Hck6HbvVla4bN6LuM8xF04UQLhZ2KvE7wd4WAWRrUdBQaJ2nGAEwBQiNAFhWAAHDixJhA1Mpg8F3Q/5sQjG0w44QdTZoIHE24cuB2LZ9N062zaLXen3W2GWGEHnv3zhMr19K8/DKLaYSYAwe2QwdxPuqIGwe3gnJCZsLKRFrvStASI7jQtd2ecPf9cxduxwY4cpN1rH3IrMBM2mOyElVXNd6ZyCwwACDhxb7DZHiVrR8ZpS6rsrwwQZkRp8YeXa8Owimt7CO3gsAoHs7nHygfBXGeKGIIWulICEVc0Ewrh9duPq5gJh3ZoTsS3QyDo1x/m7dsA8NvRGDph5YNgtqOS5vjMd1Q6D7HUnZF23OJPD4Ht8Pp5axyb4fyarosbyIpoReMqT0xAWPkgmGmvpNnPPUA6dALtWMJMAMCG0+sOu2Hr6TQtqxwg4ARWFMPqVbz+Ee4OTsxoOwBh5YPgm/YKALg5PnBD2tGZcgLAm+GHM64wJy5k2YUsQyhIuXRFa3lF61wUVpyYPBNWHgCV5A+cmOvwM6FuACAuhFU0mBzbAqFhtZ8e9O/NCUBY+SD4+kwF3TxT4QAwwwCzDOAhcOJCTqAlHNkujG3fDnFChxInrvLExN1h5YNgui1JAsGtQDsEgs/a0Mf2uMqHlWQF5kJA4IbdHXDCWiE5EYPwV3n87rDyQTDVmqTptgqB8K0oLnTaoyo4sdhlcyHboRBITBx8RyD8LWqx7aUvNaWxbeWDYLIl2ROH+GljxB4jevb0SUk7ZEPKnPAqTH/KAJgJhYgL7xO6ovo+sTlQW/rqBgCBaE2+MIahv//83XKidED30y/5cU1NW1NAWNlIEy0JmmpJOEAcRgDQwFKI/OQn9p9SbQzUa2LaS40PKytbqomWJHE7QifQDp0LP5gVTtrBgaXtwP2RYgBNzWgwo+tcZ0JzggEkrKzcXt04nSA4Menb4beDV3SmnY9th4SVj22eBwss3KIC4N8nwu0AxEWBkNi2cvtr4nTClTgRQUROICdsKHU7NDH9vSFO6HpKWIVBxcfKHCyG2OsEnzgEWiEXmG2GJCYDiBMhBNY0csJ+/nCa+OwNdkIHE/MQQviwQmzjFjUXpB2cE+KEuSEXmLQjc/DL6PMEAIGAE1wcOXGzLekUwmIbbjCABwmv8lhO2M+9umQmQghxwmk7kJpyk+pm2HYs8k26xG7Y469PU62JHB9tR/lgGgR/Rq9a/30Fwb+shyRJWXQBggAAAABJRU5ErkJggg==" InformativeScreenshot="776f60cf708e318f9ff78cb94e86c4d7.png" Selector="&lt;wnd app='w22tax.exe' cls='TfrmMain' /&gt;" Title="2023 Lacerte Individual Tax" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;Failed to close Lacerte gracefully&quot;]" />
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_10" ProcessName="w22tax.exe">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:KillProcess>
+        </TryCatch.Finally>
+      </TryCatch>
+      <TryCatch DisplayName="Try Catch-Lacerte-23" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2023 Lacerte Individual Tax" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" OpenMode="Never" ScopeGuid="4b056393-ec56-47da-ade9-a34728f21aca" Timeout="3" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,294.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="387.2,86.4" sap2010:WorkflowViewState.IdRef="Activate_7">
+                    <ui:Activate.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a9684b4e-c84c-4152-bfe3-bd6a9c845f2b">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Activate.Target>
+                  </ui:Activate>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" ScopeIdentifier="4b056393-ec56-47da-ade9-a34728f21aca" Shortcuts="[d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]l[u(hk)][d(hk)]x[u(hk)]" Version="V3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NKeyboardShortcuts>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-10, -10, 1940, 1040" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAT9SURBVFhH1ZZbU1xVEIXPb3MG5gIowYQQxEjUB/0Dls8GCAIBckNCMMPVJFyM3EMgMUASwsAMUR/0yfLJy6NWyliVqt326u59zpmBEJLKg66qXVMFc6a/Wt299gn+V3o4cKR3c/BtevTlUcrn6l1+qIG2h0/Qzsg7VBhtouL4SXp8rTlnX3992viihu7zeXD5Ldq8csRtXqmjLYbYunqMtoeOu53hE25npDGE2P3qPXp8/RTZ46+utUvVhLPeV80A1S4GQZETx1w+d1ycKIw2usJYE+0KRDO7cYq+u/G+s597OX17oYruXcRRiI0+A+ivcYDgdjAIO3H1qFMnGmhnuIGdiNrBTjhAfP+yEHfOZ93d81UECJy1S1VOILwL/W+KEwIxWCdO+HZ4J4pjTU4gxrkd4sQHh2vJSm+GVs9liSHIQ3gnuBVuva+GQcog2AmFqBcn/GAWx941J046zMQL27Hck6HbvVla4bN6LuM8xF04UQLhZ2KvE7wd4WAWRrUdBQaJ2nGAEwBQiNAFhWAAHDixJhA1Mpg8F3Q/5sQjG0w44QdTZoIHE24cuB2LZ9N062zaLXen3W2GWGEHnv3zhMr19K8/DKLaYSYAwe2QwdxPuqIGwe3gnJCZsLKRFrvStASI7jQtd2ecPf9cxduxwY4cpN1rH3IrMBM2mOyElVXNd6ZyCwwACDhxb7DZHiVrR8ZpS6rsrwwQZkRp8YeXa8Owimt7CO3gsAoHs7nHygfBXGeKGIIWulICEVc0Ewrh9duPq5gJh3ZoTsS3QyDo1x/m7dsA8NvRGDph5YNgtqOS5vjMd1Q6D7HUnZF23OJPD4Ht8Pp5axyb4fyarosbyIpoReMqT0xAWPkgmGmvpNnPPUA6dALtWMJMAMCG0+sOu2Hr6TQtqxwg4ARWFMPqVbz+Ee4OTsxoOwBh5YPgm/YKALg5PnBD2tGZcgLAm+GHM64wJy5k2YUsQyhIuXRFa3lF61wUVpyYPBNWHgCV5A+cmOvwM6FuACAuhFU0mBzbAqFhtZ8e9O/NCUBY+SD4+kwF3TxT4QAwwwCzDOAhcOJCTqAlHNkujG3fDnFChxInrvLExN1h5YNgui1JAsGtQDsEgs/a0Mf2uMqHlWQF5kJA4IbdHXDCWiE5EYPwV3n87rDyQTDVmqTptgqB8K0oLnTaoyo4sdhlcyHboRBITBx8RyD8LWqx7aUvNaWxbeWDYLIl2ROH+GljxB4jevb0SUk7ZEPKnPAqTH/KAJgJhYgL7xO6ovo+sTlQW/rqBgCBaE2+MIahv//83XKidED30y/5cU1NW1NAWNlIEy0JmmpJOEAcRgDQwFKI/OQn9p9SbQzUa2LaS40PKytbqomWJHE7QifQDp0LP5gVTtrBgaXtwP2RYgBNzWgwo+tcZ0JzggEkrKzcXt04nSA4Menb4beDV3SmnY9th4SVj22eBwss3KIC4N8nwu0AxEWBkNi2cvtr4nTClTgRQUROICdsKHU7NDH9vSFO6HpKWIVBxcfKHCyG2OsEnzgEWiEXmG2GJCYDiBMhBNY0csJ+/nCa+OwNdkIHE/MQQviwQmzjFjUXpB2cE+KEuSEXmLQjc/DL6PMEAIGAE1wcOXGzLekUwmIbbjCABwmv8lhO2M+9umQmQghxwmk7kJpyk+pm2HYs8k26xG7Y469PU62JHB9tR/lgGgR/Rq9a/30Fwb+shyRJWXQBggAAAABJRU5ErkJggg==" InformativeScreenshot="776f60cf708e318f9ff78cb94e86c4d7.png" Selector="&lt;wnd app='w23tax.exe' cls='TfrmMain' /&gt;" Title="2023 Lacerte Individual Tax" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;Failed to close Lacerte gracefully&quot;]" />
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_11" ProcessName="w23tax.exe">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:KillProcess>
+        </TryCatch.Finally>
+      </TryCatch>
+    </Sequence>
+    <Sequence DisplayName="Closing Ultra" sap:VirtualizedContainerService.HintSize="456,225.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch-Ultra-22" sap:VirtualizedContainerService.HintSize="387.2,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS " sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" OpenMode="Never" ScopeGuid="cb98d11c-6b48-41da-87e4-45842af97623" Timeout="3" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,259.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="Activate_8">
+                    <ui:Activate.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f21288cc-1279-4e02-8ea4-e188869a2d28">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Activate.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:Activate>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" Shortcuts="[d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]f[u(hk)][d(hk)]x[u(hk)]" Version="V3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NKeyboardShortcuts>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-10, -10, 1940, 1040" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARbSURBVFhHlZdZSJRRFMe/h3oQgl56iKCHCDQiCISiiEKiECIjiKCJaIOaFlotjWrQlMpCrabNrGRsM6V0Whmzsk0y20RKKVu1QoSJop0eTvfce84391vHDvw5M/fq/f3P+c4334zBUf86DsX3u2BNrNNTK6++6JOC0TZYefGZYw21ub4Djj98B4RVgeBAbTsM298MA4pug7HtelL1y4tZZGy9ql5vvmBd31Qr9zDj+5QtdTCq9BqMPXBLmTjZ1gPTq9okuF+BO0yXfrgEMFgXmiDpBlhyfUMNrDrRAMaCaIes3A8uQZRZDLZU7iIdjFBdgxcVgpEReeJZvQ5k2cGyIpEzKlrktS1rUZIt9oFLTVulDCBcN8AwL9nhmHNj7aDHgqoH3mDUutNgTF1KBvKvWQC63GCOLFqdc+ExoVUETrd4g4X6rz1BBkTrkhlwNUHXl6+1awcEUII4E5jlbgAPpNcM1F9j1g1wZfYOoAEd7ib/DpARO1AH4/0cvvcKnvd8Jaw1vvz8AzWt7yG9+IoTHiwDY/IiMqABZbbJYkKA8cMEJ/5/ovLRWwtcZocBmxjMFbOizz/SsSriP347uvCoKy47oAeaMOFmB8rv/Rc8q+IuHQfw889fCJxsksPluAsit2Dg+ohjfVJxVMG9DLhBdWEVHHg4tzU3+pBWVaABBuGccIQbn3kbkBAPuGybyHfe9NJRABnhetOAWwcQgnvp28/RKkB9e7eCL96rGcg97wDaxSDdwLLqZnPd0YFj4kHDlQrhnYBGUkNnFBzXJ83zN8CH69LbicPHlSYzYEL1zAb6CkelFtbK4dMDjbyPf6N3KkwDDLTDTQPiOiYDG6srVRb/jDmrrEFC/QINVbV0wpLKGzA0uzwB1SUNHBEt9KkY4VIElxWI93iL7Yi1wpveL4T0j8YXH2B0nngQLSxJiDtgh7IYZoG7aEhOJVQ0dRDKPwKHLicMjJ/tbgAPNYFkwFeinfYhxNZnltZBSeyxZWbw9YBgWHwVK7YawIOSwQdlR+SthBq6SezhdcQ9kXPONRFCRaBMPMapUpyB+PdftCP2Dl50GnDAXYSTzYEDZg6TnwEECWEnOAqj98GYt5MM7LnsC9WFn+McWJFpQIAcBrhKlIDtuNRMO6C+DesG3GCmEEA5ZflhyxMuVCcqoTZ7GhAgvOadPZ9pByBzd3UfDWhwlh109GYrpOef8jSQHopAY0cXrYI0IuFswPJ49IDqSgnuhzsvrd8HMPQhw2jr7nV8RuAdMGGbGF6Ezw5RB0rEU5ABPmBuNQpbGm54Ssf2LR68/gTj8iKJ6rPWw+Apc8HA1smDvaCcWTxYQsM3lsuJxsPdAtfxEmUWVSXAWDlVv7ygVP0+HLlil3Qk/0CH6WIw/o09C+WebSSsCjkDtGfMKVAZwfhraMwMSJs6y/oLeeO+CkjLmg/GyIlKIyb4K3WcJS8NFUHnu25T04PZas+mtMkzYU1+EcEN4x+dQxI3PmW5bwAAAABJRU5ErkJggg==" InformativeScreenshot="6941a247c13b61d6092239ba55006bb3.png" Selector="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='2022 UltraTax CS ' /&gt;" Title="2022 UltraTax CS " />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[&quot;Failed to close Ultra gracefully&quot;]" />
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_12" ProcessName="utw22.exe">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:KillProcess>
+        </TryCatch.Finally>
+      </TryCatch>
+      <TryCatch DisplayName="Try Catch-Ultra-23" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="TryCatch_11">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2023 UltraTax CS " sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" OpenMode="Never" ScopeGuid="cb98d11c-6b48-41da-87e4-45842af97623" Timeout="3" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,260.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="Activate_9">
+                    <ui:Activate.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f21288cc-1279-4e02-8ea4-e188869a2d28">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Activate.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:Activate>
+                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_9" ScopeIdentifier="cb98d11c-6b48-41da-87e4-45842af97623" Shortcuts="[d(hk)][d(alt)][u(alt)][u(hk)][d(hk)]f[u(hk)][d(hk)]x[u(hk)]" Version="V3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NKeyboardShortcuts>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-10, -10, 1940, 1040" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARbSURBVFhHlZdZSJRRFMe/h3oQgl56iKCHCDQiCISiiEKiECIjiKCJaIOaFlotjWrQlMpCrabNrGRsM6V0Whmzsk0y20RKKVu1QoSJop0eTvfce84391vHDvw5M/fq/f3P+c4334zBUf86DsX3u2BNrNNTK6++6JOC0TZYefGZYw21ub4Djj98B4RVgeBAbTsM298MA4pug7HtelL1y4tZZGy9ql5vvmBd31Qr9zDj+5QtdTCq9BqMPXBLmTjZ1gPTq9okuF+BO0yXfrgEMFgXmiDpBlhyfUMNrDrRAMaCaIes3A8uQZRZDLZU7iIdjFBdgxcVgpEReeJZvQ5k2cGyIpEzKlrktS1rUZIt9oFLTVulDCBcN8AwL9nhmHNj7aDHgqoH3mDUutNgTF1KBvKvWQC63GCOLFqdc+ExoVUETrd4g4X6rz1BBkTrkhlwNUHXl6+1awcEUII4E5jlbgAPpNcM1F9j1g1wZfYOoAEd7ib/DpARO1AH4/0cvvcKnvd8Jaw1vvz8AzWt7yG9+IoTHiwDY/IiMqABZbbJYkKA8cMEJ/5/ovLRWwtcZocBmxjMFbOizz/SsSriP347uvCoKy47oAeaMOFmB8rv/Rc8q+IuHQfw889fCJxsksPluAsit2Dg+ohjfVJxVMG9DLhBdWEVHHg4tzU3+pBWVaABBuGccIQbn3kbkBAPuGybyHfe9NJRABnhetOAWwcQgnvp28/RKkB9e7eCL96rGcg97wDaxSDdwLLqZnPd0YFj4kHDlQrhnYBGUkNnFBzXJ83zN8CH69LbicPHlSYzYEL1zAb6CkelFtbK4dMDjbyPf6N3KkwDDLTDTQPiOiYDG6srVRb/jDmrrEFC/QINVbV0wpLKGzA0uzwB1SUNHBEt9KkY4VIElxWI93iL7Yi1wpveL4T0j8YXH2B0nngQLSxJiDtgh7IYZoG7aEhOJVQ0dRDKPwKHLicMjJ/tbgAPNYFkwFeinfYhxNZnltZBSeyxZWbw9YBgWHwVK7YawIOSwQdlR+SthBq6SezhdcQ9kXPONRFCRaBMPMapUpyB+PdftCP2Dl50GnDAXYSTzYEDZg6TnwEECWEnOAqj98GYt5MM7LnsC9WFn+McWJFpQIAcBrhKlIDtuNRMO6C+DesG3GCmEEA5ZflhyxMuVCcqoTZ7GhAgvOadPZ9pByBzd3UfDWhwlh109GYrpOef8jSQHopAY0cXrYI0IuFswPJ49IDqSgnuhzsvrd8HMPQhw2jr7nV8RuAdMGGbGF6Ezw5RB0rEU5ABPmBuNQpbGm54Ssf2LR68/gTj8iKJ6rPWw+Apc8HA1smDvaCcWTxYQsM3lsuJxsPdAtfxEmUWVSXAWDlVv7ygVP0+HLlil3Qk/0CH6WIw/o09C+WebSSsCjkDtGfMKVAZwfhraMwMSJs6y/oLeeO+CkjLmg/GyIlKIyb4K3WcJS8NFUHnu25T04PZas+mtMkzYU1+EcEN4x+dQxI3PmW5bwAAAABJRU5ErkJggg==" InformativeScreenshot="6941a247c13b61d6092239ba55006bb3.png" Selector="&lt;wnd app='utw*.exe' cls='CSIUTW*' title='2023 UltraTax CS ' /&gt;" Title="2022 UltraTax CS " />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,213.6" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_8" Message="[&quot;Failed to close Ultra gracefully&quot;]" />
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_13" ProcessName="utw23.exe">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:KillProcess>
+        </TryCatch.Finally>
+      </TryCatch>
+    </Sequence>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Close_Fileroom - Invoke Workflow File (ServicesLayer\Common\Close_Fileroom.xaml)" sap:VirtualizedContainerService.HintSize="456,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ServicesLayer\Common\Close_Fileroom.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="456,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Closed all tax application.&quot;]" />
+  </Sequence>
+</Activity>
