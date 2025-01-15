@@ -7,7 +7,7 @@
     <x:Property Name="Str_TC129_Status" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_str_TaxSoftware" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1038.4,15306.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>998.4000000000001,13948</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -136,19 +136,19 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Seq_VerifyAddedRowFields" sap:VirtualizedContainerService.HintSize="800,15241.6" sap2010:WorkflowViewState.IdRef="Sequence_93">
+  <Sequence DisplayName="Seq_VerifyAddedRowFields" sap:VirtualizedContainerService.HintSize="800,13883.2" sap2010:WorkflowViewState.IdRef="Sequence_93">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="TC_125 Verify if user is able to edit description field when description field is disabled.&#xA;TC_126 Verify if user is able to edit description field when description field is enable.&#xA;" AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 | Binder ID: 336561" sap:VirtualizedContainerService.HintSize="737.6,8049.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V2">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="TC_125 Verify if user is able to edit description field when description field is disabled.&#xA;TC_126 Verify if user is able to edit description field when description field is enable.&#xA;" AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 | Binder ID: 336561" sap:VirtualizedContainerService.HintSize="737.6,6691.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" ScopeGuid="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704,7666.4" sap2010:WorkflowViewState.IdRef="Sequence_84">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="704,6308" sap2010:WorkflowViewState.IdRef="Sequence_84">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_DescriptionText" />
               <Variable x:TypeArguments="x:String" Default="BRIDGE GROWTH PARTNERS, LP (T)" Name="str_Entity" />
@@ -210,7 +210,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NMouseScroll>
-            <Switch x:TypeArguments="x:String" DisplayName="OCR Entity handling based on TaxSofware" Expression="[in_str_TaxSoftware]" sap:VirtualizedContainerService.HintSize="641.6,612" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:String" DisplayName="OCR Entity handling based on TaxSofware" Expression="[in_str_TaxSoftware]" sap:VirtualizedContainerService.HintSize="641.6,56.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <Switch.Default>
                 <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="2" DisplayName="Click 'BRIDGE GROWTH'" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
                   <uix:NClick.Target>
@@ -226,8 +226,8 @@
               </Switch.Default>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <uix:NClick x:Key="GoSystem Tax RS" ActivateBefore="True" ClickType="Single" DisplayName="Click 'BRIDGE GROWTH PARTNERS,…'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_45" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V4">
@@ -300,18 +300,35 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Seq_DeleteAddedRow - Invoke Workflow File (SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_DeleteAddedRow.xaml)" sap:VirtualizedContainerService.HintSize="641.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_DeleteAddedRow.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <scg:Dictionary x:TypeArguments="x:String, Argument" />
-              </ui:InvokeWorkflowFile.Arguments>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="641.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_103">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Seq_DeleteAddedRow - Invoke Workflow File (SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_DeleteAddedRow.xaml)" sap:VirtualizedContainerService.HintSize="353.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="SubProcess_K1GenericFlows\GR_1_2_GoCCH\Seq_DeleteAddedRow.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:InvokeWorkflowFile>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ADD NEW ROW'" sap:VirtualizedContainerService.HintSize="641.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_34" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
+            </ui:CommentOut>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ADD NEW ROW'" sap:VirtualizedContainerService.HintSize="641.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_34" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c5b721b-296a-4bc7-baf6-5362fa945780" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable CVScreenId="33083681-fc2b-4363-91ac-fe14f8467fa1" CvTextArea="375, 625, 100, 13" CvTextArgument="ADD NEW ROW" CvType="Text" DesignTimeRectangle="376, 625, 100, 18" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl name='ADD NEW ROW' role='text' idx='1' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl name='ADD NEW ROW' role='text' automationid='' check:text='ADD NEW ROW' /&gt;" Guid="57233ec7-3f3b-4d07-b000-2b017c7d48f8" InformativeScreenshot="99ab587533d8fb6976ebc841c7aafed1.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' omit:title='SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 *' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Visible" WaitForReadyArgument="Complete" />
               </uix:NClick.Target>
@@ -327,8 +344,8 @@
               </uix:NClick.VerifyOptions>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
@@ -362,11 +379,11 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGetText>
-            <If Condition="[str_DescriptionText.ToUpper.Contains(&quot;OTHER INTEREST INCOME - US&quot;)]" DisplayName="Check Description and Log Messages" sap:VirtualizedContainerService.HintSize="641.6,909.6" sap2010:WorkflowViewState.IdRef="If_12">
+            <If Condition="[str_DescriptionText.ToUpper.Contains(&quot;OTHER INTEREST INCOME - US&quot;)]" DisplayName="Check Description and Log Messages" sap:VirtualizedContainerService.HintSize="641.6,56.8" sap2010:WorkflowViewState.IdRef="If_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
