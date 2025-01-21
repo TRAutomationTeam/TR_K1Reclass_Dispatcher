@@ -78,6 +78,7 @@
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -150,6 +151,8 @@
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -158,7 +161,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="ULTRA" sap:VirtualizedContainerService.HintSize="1120.8,966.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="ULTRA" sap:VirtualizedContainerService.HintSize="1033.6,589.6" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ClientDetails" />
       <Variable x:TypeArguments="x:String" Name="LastClientIdCreated" />
@@ -170,8 +173,8 @@
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">460,2.5</av:Point>
-        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">490,77.5 490,117.16666666666667</av:PointCollection>
+        <av:Size x:Key="ShapeSize">49.6,49.6</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">484.8,52.1 484.8,82.1 445.2,82.1 445.2,117.16666666666667</av:PointCollection>
         <x:Double x:Key="Width">1087</x:Double>
         <x:Double x:Key="Height">930</x:Double>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -184,17 +187,17 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">390,117.16666666666667</av:Point>
-          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">490,169.96666666666667 490,199.96666666666667 489.8666666666667,199.96666666666667 489.8666666666667,236.66666666666669</av:PointCollection>
+          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">445.2,187.56666666666666 445.2,217.56666666666666 472.6666666666667,217.56666666666666 472.6666666666667,236.66666666666669</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope-For the client details" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_5" ShowExcelWindow="False">
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope-For the client details" sap:VirtualizedContainerService.HintSize="721.6,2084" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_5" ShowExcelWindow="False">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="649.6,1666.4" sap2010:WorkflowViewState.IdRef="Sequence_131">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,1997.6" sap2010:WorkflowViewState.IdRef="Sequence_131">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="int_IndexCount" />
               </Sequence.Variables>
@@ -204,8 +207,8 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="587.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Reading filed for the client id creation&quot;]" />
-              <Assign sap:VirtualizedContainerService.HintSize="587.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_129">
+              <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="625.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Reading filed for the client id creation&quot;]" />
+              <Assign sap:VirtualizedContainerService.HintSize="625.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_129">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[TaxYear]</OutArgument>
                 </Assign.To>
@@ -213,7 +216,7 @@
                   <InArgument x:TypeArguments="x:String">[if(in_isPrevYr, (cint(in_TransactionItem.SpecificContent("TaxYear"))-1).ToString.Trim, in_TransactionItem.SpecificContent("TaxYear").ToString.Trim)]</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="587.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_130">
+              <Assign sap:VirtualizedContainerService.HintSize="625.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_130">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strAppName]</OutArgument>
                 </Assign.To>
@@ -221,33 +224,57 @@
                   <InArgument x:TypeArguments="x:String">["utw" + TaxYear.Substring(2)+ ".exe"]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ClientDetails]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="587.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[in_Config(&quot;Ultra_ClientSheet&quot;).ToString]" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]" />
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_IndexCount]" DataTable="[dt_ClientDetails]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="587.2,696.8" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_ClientDetails]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="625.6,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="[in_Config(&quot;Ultra_ClientSheet&quot;).ToString]" WorkbookPath="[in_Config(&quot;InputFilePath&quot;).ToString]" />
+              <ui:FilterDataTable DataTable="[dt_ClientDetails]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="625.6,194.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_ClientDetails]" SelectColumnsMode="Remove">
+                <ui:FilterDataTable.Filters>
+                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                    <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
+                      <ui:FilterOperationArgument.Column>
+                        <InArgument x:TypeArguments="x:String">["ID Created"]</InArgument>
+                      </ui:FilterOperationArgument.Column>
+                    </ui:FilterOperationArgument>
+                  </scg:List>
+                </ui:FilterDataTable.Filters>
+                <ui:FilterDataTable.SelectColumns>
+                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                    <x:Null />
+                  </scg:List>
+                </ui:FilterDataTable.SelectColumns>
+              </ui:FilterDataTable>
+              <Assign sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_131">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="sd:DataTable">[dt_ClientDetails]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="sd:DataTable">[dt_ClientDetails.Select("[Year]='"+TaxYear+"'").CopyToDataTable]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_IndexCount]" DataTable="[dt_ClientDetails]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.6,802.4" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="ExecuteRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,508.8" sap2010:WorkflowViewState.IdRef="Sequence_130">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="592,604.8" sap2010:WorkflowViewState.IdRef="Sequence_130">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[String.IsNullOrEmpty(ExecuteRow(&quot;ID Created&quot;).ToString.Trim) And &#xA;(Not String.IsNullOrEmpty(ExecuteRow(&quot;Sr No&quot;).ToString.Trim)) And &#xA;ExecuteRow(&quot;Year&quot;).ToString.Trim.Equals(TaxYear) And &#xA;ExecuteRow(&quot;Type&quot;).ToString.Trim.Equals(in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="510.4,419.2" sap2010:WorkflowViewState.IdRef="If_15">
+                      <If Condition="[String.IsNullOrEmpty(ExecuteRow(&quot;ID Created&quot;).ToString.Trim) And &#xA;(Not String.IsNullOrEmpty(ExecuteRow(&quot;Sr No&quot;).ToString.Trim)) And &#xA;ExecuteRow(&quot;Year&quot;).ToString.Trim.Equals(TaxYear) And &#xA;ExecuteRow(&quot;Type&quot;).ToString.Trim.Equals(in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="529.6,516" sap2010:WorkflowViewState.IdRef="If_15">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="476.8,236" sap2010:WorkflowViewState.IdRef="Sequence_128">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,249.6" sap2010:WorkflowViewState.IdRef="Sequence_128">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="Assign ExecuteRow" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_44">
+                            <Assign DisplayName="Assign ExecuteRow" sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_44">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="sd:DataRow">[out_CurrentRow]</OutArgument>
                               </Assign.To>
@@ -255,11 +282,11 @@
                                 <InArgument x:TypeArguments="sd:DataRow">[ExecuteRow]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:Break sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="Break_1" />
+                            <ui:Break sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="Break_1" />
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_129">
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_129">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -278,7 +305,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <Assign sap:VirtualizedContainerService.HintSize="587.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_128">
+              <Assign sap:VirtualizedContainerService.HintSize="625.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_128">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[out_ClientID]</OutArgument>
                 </Assign.To>
@@ -286,7 +313,7 @@
                   <InArgument x:TypeArguments="x:String">[in_Config("Client_Initials_ULT").ToString+now.ToString("ddMMyyyy")]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="587.2,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Reading the client data completed&quot;]" />
+              <ui:LogMessage DisplayName="Log Message reading data" sap:VirtualizedContainerService.HintSize="625.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Reading the client data completed&quot;]" />
             </Sequence>
           </ActivityAction>
         </ueab:ExcelProcessScopeX.Body>
@@ -297,14 +324,14 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID5" Condition="[Not out_CurrentRow is Nothing]" DisplayName="Valid Row Found" sap:VirtualizedContainerService.HintSize="94.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+        <FlowDecision x:Name="__ReferenceID5" Condition="[Not out_CurrentRow is Nothing]" DisplayName="Valid Row Found" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">442.6666666666667,236.66666666666669</av:Point>
-              <av:Size x:Key="ShapeSize">94.4,87.2</av:Size>
-              <av:PointCollection x:Key="TrueConnector">442.6666666666667,280.2666666666667 249.8,280.2666666666667 249.8,337.6666666666667</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">537.0666666666667,280.2666666666667 729.8,280.2666666666667 729.8,377.3333333333333</av:PointCollection>
+              <av:Size x:Key="ShapeSize">60,60</av:Size>
+              <av:PointCollection x:Key="TrueConnector">442.6666666666667,266.6666666666667 88.2,266.6666666666667 88.2,337.6666666666667</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">502.6666666666667,266.6666666666667 568.2,266.6666666666667 568.2,377.3333333333333</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -312,11 +339,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">33,337.6666666666667</av:Point>
-                  <av:Size x:Key="ShapeSize">433.6,81.6</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">249.8,419.26666666666665 249.8,449.26666666666665 250,449.26666666666665 250,454</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">88.2,408.0666666666667 88.2,438.0666666666667 205.2,438.0666666666667 205.2,454</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_60">
+              <Assign sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Assign_60">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">[out_isRowFound]</OutArgument>
                 </Assign.To>
@@ -334,11 +361,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">150,454</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">250,506.8 250,546</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">205.2,524.4 205.2,546</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="False" DisplayName="Use Application: 2022 UltraTax CS " sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_20" OpenMode="IfNotOpen" ScopeGuid="da16b5be-4a90-4903-bf1f-6b6dba9f5377" Version="V2" WindowResize="Maximize">
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="False" DisplayName="Use Application: 2022 UltraTax CS " sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_20" OpenMode="IfNotOpen" ScopeGuid="da16b5be-4a90-4903-bf1f-6b6dba9f5377" Version="V2" WindowResize="Maximize">
                     <uix:NApplicationCard.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -371,11 +398,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">150,546</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">250,598 250,628 249.33333333333337,628 249.33333333333337,647</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">205.2,616.4 205.2,646.4 228.33333333333337,646.4 228.33333333333337,647</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NCheckState DisplayName="Check App State 'Sign in'" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_12" Timeout="60" Version="V3">
+                      <uix:NCheckState DisplayName="Check App State 'Sign in'" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NCheckState_12" Timeout="60" Version="V3">
                         <uix:NCheckState.IfExists>
                           <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,197.6" sap2010:WorkflowViewState.IdRef="Sequence_288">
                             <sap:WorkflowViewStateService.ViewState>
@@ -421,12 +448,12 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </uix:NCheckState>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID1" Condition="[isUltraOpen]" DisplayName="Already Logged In" sap:VirtualizedContainerService.HintSize="103.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                        <FlowDecision x:Name="__ReferenceID1" Condition="[isUltraOpen]" DisplayName="Already Logged In" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">198.33333333333337,647</av:Point>
-                              <av:Size x:Key="ShapeSize">103.2,87.2</av:Size>
+                              <av:Size x:Key="ShapeSize">60,60</av:Size>
                               <av:PointCollection x:Key="TrueConnector">198.33333333333337,690.6 120,690.6 120,803.6</av:PointCollection>
                               <av:PointCollection x:Key="FalseConnector">301.53333333333336,690.6 400,690.6 400,753.6</av:PointCollection>
                             </scg:Dictionary>
@@ -436,10 +463,10 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">20,803.6</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS " sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" OpenMode="Never" ScopeGuid="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V2">
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 2022 UltraTax CS " sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_31" OpenMode="Never" ScopeGuid="d2c22cb9-ed04-48db-ab9e-2631979f2f8a" Version="V2">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
@@ -1907,7 +1934,7 @@
                                                                       <ActivityFunc.Argument>
                                                                         <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                                                                       </ActivityFunc.Argument>
-                                                                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_19" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                                                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_19" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                                                     </ActivityFunc>
                                                                   </p:CVScope.OCREngine>
                                                                   <p:CVScope.Target>
@@ -2423,7 +2450,7 @@
                                                                       <ActivityFunc.Argument>
                                                                         <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                                                                       </ActivityFunc.Argument>
-                                                                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_20" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                                                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_20" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                                                     </ActivityFunc>
                                                                   </p:CVScope.OCREngine>
                                                                   <p:CVScope.Target>
@@ -3844,7 +3871,7 @@
                                                                 <ActivityFunc.Argument>
                                                                   <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                                                                 </ActivityFunc.Argument>
-                                                                <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_13" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                                                <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_13" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                                               </ActivityFunc>
                                                             </p:CVScope.OCREngine>
                                                             <p:CVScope.Target>
@@ -4391,7 +4418,7 @@
                                                                 <ActivityFunc.Argument>
                                                                   <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                                                                 </ActivityFunc.Argument>
-                                                                <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_18" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                                                <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_18" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                                               </ActivityFunc>
                                                             </p:CVScope.OCREngine>
                                                             <p:CVScope.Target>
@@ -5072,7 +5099,7 @@
                                                                   <ActivityFunc.Argument>
                                                                     <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                                                                   </ActivityFunc.Argument>
-                                                                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_12" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                                                                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_12" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                                                                 </ActivityFunc>
                                                               </p:CVScope.OCREngine>
                                                               <p:CVScope.Target>
@@ -5270,11 +5297,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">300,753.6</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,52.8</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">400,806.4 400,830 220,830</av:PointCollection>
+                                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">300,788.8000000000001 270,788.8000000000001 270,838.8000000000001 130.4,838.8000000000001</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:RetryScope DisplayName="Retry Scope- For login purpose" sap:VirtualizedContainerService.HintSize="1222.4,2571.2" sap2010:WorkflowViewState.IdRef="RetryScope_9" NumberOfRetries="3" RetryInterval="00:00:02">
+                              <ui:RetryScope DisplayName="Retry Scope- For login purpose" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="RetryScope_9" NumberOfRetries="3" RetryInterval="00:00:02">
                                 <ui:RetryScope.ActivityBody>
                                   <ActivityAction>
                                     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Sign In" sap:VirtualizedContainerService.HintSize="1180.8,2395.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_39" OpenMode="Never" ScopeGuid="f7707b9a-6c0c-4c51-8a1c-90c4e8fbe47d" Timeout="60" Version="V2">
@@ -5831,11 +5858,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">513,377.3333333333333</av:Point>
-                  <av:Size x:Key="ShapeSize">433.6,81.6</av:Size>
+                  <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">227,542 227,572 230,572 230,606</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_59">
+              <Assign sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="Assign_59">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">[out_isRowFound]</OutArgument>
                 </Assign.To>

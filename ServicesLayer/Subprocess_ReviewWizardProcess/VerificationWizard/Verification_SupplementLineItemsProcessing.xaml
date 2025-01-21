@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>973.6,4325.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>973.6,4282.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Verification_LineItemsProcessing_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <AssemblyReference>TR_Aut_K1_Reclass_Dispatcher_2023.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verification_LineItemsProcessing" sap:VirtualizedContainerService.HintSize="769.6,4260.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verification_LineItemsProcessing" sap:VirtualizedContainerService.HintSize="772,4217.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_WizardMapping" />
       <Variable x:TypeArguments="x:String" Name="str_WizardMapping" />
@@ -134,7 +134,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="707.2,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="709.6,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -172,8 +172,8 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Line Items Processing Start log" sap:VirtualizedContainerService.HintSize="707.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Verification LineItems Processing Started&quot;]" />
-    <ui:ReadRange AddHeaders="True" DataTable="[dt_WizardMapping]" DisplayName="Wizard Mapping File" sap:VirtualizedContainerService.HintSize="707.2,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="[Nothing]" SheetName="[str_WizardSheet]" WorkbookPath="[str_WizardMapping]" />
+    <ui:LogMessage DisplayName="Line Items Processing Start log" sap:VirtualizedContainerService.HintSize="709.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Verification LineItems Processing Started&quot;]" />
+    <ui:ReadRange AddHeaders="True" DataTable="[dt_WizardMapping]" DisplayName="Wizard Mapping File" sap:VirtualizedContainerService.HintSize="709.6,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="[Nothing]" SheetName="[str_WizardSheet]" WorkbookPath="[str_WizardMapping]" />
     <ui:LogMessage DisplayName="Mapping file and worksheet log" sap:VirtualizedContainerService.HintSize="707.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Mapping file selected: &quot;+in_Config(&quot;WizardMappingFile&quot;).ToString +&quot;  &amp; &quot;+&quot;Mapping Tax Software: &quot;+in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" />
     <Assign DisplayName="filtered wizard mapping based on engagement &amp; tax yr" sap:VirtualizedContainerService.HintSize="707.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
@@ -183,26 +183,26 @@
         <InArgument x:TypeArguments="sd:DataTable">[dt_WizardMapping.Select("[Engagement]='"+str_Engagement+"' and [Tax Year]='"+str_TaxYear+"'").CopyToDataTable]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Line Items Count log" sap:VirtualizedContainerService.HintSize="707.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Line Items picked from mapping selection: &quot;+dt_WizardMapping.Rows.Count.ToString]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_WizardMapping]" DisplayName="Iterate Line Items - Verification Wizard" sap:VirtualizedContainerService.HintSize="707.2,3172.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+    <ui:LogMessage DisplayName="Line Items Count log" sap:VirtualizedContainerService.HintSize="709.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Line Items picked from mapping selection: &quot;+dt_WizardMapping.Rows.Count.ToString]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_WizardMapping]" DisplayName="Iterate Line Items - Verification Wizard" sap:VirtualizedContainerService.HintSize="709.6,3129.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Lines" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="673.6,2984" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="676,2940.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1040SCAN : Verification (EngagementID : 33464205, Domain : Automation-01, SP Client" sap:VirtualizedContainerService.HintSize="611.2,2895.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="9b89d218-c771-4160-985b-df483ea957e4" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1040SCAN : Verification (EngagementID : 33464205, Domain : Automation-01, SP Client" sap:VirtualizedContainerService.HintSize="613.6,2852" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="9b89d218-c771-4160-985b-df483ea957e4" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="561.6,2540.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="574.4,2537.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Int32" Name="noOfScrolls" />
                     </Sequence.Variables>
@@ -211,8 +211,8 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="********************" sap:VirtualizedContainerService.HintSize="499.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;*******************************************&quot;]" />
-                    <ui:LogMessage DisplayName="Line Item Processing" sap:VirtualizedContainerService.HintSize="499.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[Lines(&quot;LineItem&quot;).ToString +&quot; Processing&quot;]" />
+                    <ui:LogMessage DisplayName="********************" sap:VirtualizedContainerService.HintSize="512,176" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;*******************************************&quot;]" />
+                    <ui:LogMessage DisplayName="Line Item Processing" sap:VirtualizedContainerService.HintSize="512,176" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[Lines(&quot;LineItem&quot;).ToString +&quot; Processing&quot;]" />
                     <ui:LogMessage DisplayName="********************" sap:VirtualizedContainerService.HintSize="499.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;*******************************************&quot;]" />
                     <ui:LogMessage DisplayName="Referenec Coordinates log" sap:VirtualizedContainerService.HintSize="499.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Reference Co-ordinates positioned at- X &quot;+str_Xaxis.ToString+&quot; Y &quot;+str_Yaxis.ToString]" />
                     <Assign DisplayName="no of Scrolls" sap:VirtualizedContainerService.HintSize="499.2,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -228,7 +228,7 @@
                         <uix:TargetAnchorable DesignTimeRectangle="1908, 538, 22, 422" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='NonClientVerticalScrollBar' idx='87' name='Vertical' role='scroll bar' /&gt;&lt;ctrl automationid='DownPageButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='NonClientVerticalScrollBar' name='Vertical' role='scroll bar' /&gt;&lt;ctrl automationid='DownPageButton' role='push button' check:text='Page down' /&gt;" Guid="cff3b335-39ad-4feb-bb09-4c4906654ef3" InformativeScreenshot="36fb3e610898aae15921a8f7499bf87f.png" ScopeSelectorArgument="&lt;wnd app='spreviewwizard.exe' ctrlname='SPVContainer' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Interactive" />
                       </uix:NMouseScroll.Target>
                     </uix:NMouseScroll>
-                    <Sequence DisplayName="Description" sap:VirtualizedContainerService.HintSize="499.2,885.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <Sequence DisplayName="Description" sap:VirtualizedContainerService.HintSize="512,857.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -309,7 +309,7 @@
                           </ui:Target>
                         </ui:Click.Target>
                       </ui:Click>
-                      <TryCatch DisplayName="Description" sap:VirtualizedContainerService.HintSize="436.8,84.8" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                      <TryCatch DisplayName="Description" sap:VirtualizedContainerService.HintSize="436.8,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -357,14 +357,14 @@
                       </TryCatch>
                       <ui:LogMessage DisplayName="Line Description log" sap:VirtualizedContainerService.HintSize="436.8,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Description# &quot;+Lines.Item(&quot;LineDescription&quot;).ToString+&quot; added&quot;]" />
                     </Sequence>
-                    <Sequence DisplayName="Instruction" sap:VirtualizedContainerService.HintSize="499.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <Sequence DisplayName="Instruction" sap:VirtualizedContainerService.HintSize="512,56.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If Condition="[string.IsNullOrEmpty(Lines.Item(&quot;LineInstruction&quot;).ToString.Trim)]" DisplayName="Instruction" sap:VirtualizedContainerService.HintSize="410.4,648" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If Condition="[string.IsNullOrEmpty(Lines.Item(&quot;LineInstruction&quot;).ToString.Trim)]" DisplayName="Instruction" sap:VirtualizedContainerService.HintSize="449.6,664" sap2010:WorkflowViewState.IdRef="If_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -372,7 +372,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -381,13 +381,13 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="376.8,382.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="416,388.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <TryCatch DisplayName="Reference Instruction" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                            <TryCatch DisplayName="Reference Instruction" sap:VirtualizedContainerService.HintSize="353.6,84.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -416,10 +416,10 @@
                                 </ui:Click>
                               </TryCatch.Try>
                               <TryCatch.Catches>
-                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,648" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -427,7 +427,7 @@
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                     </ActivityAction.Argument>
-                                    <If Condition="[Lines.Item(&quot;LineItem&quot;).ToString.Equals(&quot;Line13W&quot;)]" DisplayName="13W Ref Instruction" sap:VirtualizedContainerService.HintSize="410.4,576.8" sap2010:WorkflowViewState.IdRef="If_1">
+                                    <If Condition="[Lines.Item(&quot;LineItem&quot;).ToString.Equals(&quot;Line13W&quot;)]" DisplayName="13W Ref Instruction" sap:VirtualizedContainerService.HintSize="449.6,576.8" sap2010:WorkflowViewState.IdRef="If_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -435,13 +435,13 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,196.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                        <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="416,219.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Reference Instruction" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Reference Instruction" sap:VirtualizedContainerService.HintSize="353.6,130.4" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
                                             <ui:Click.CursorPosition>
                                               <ui:CursorPosition Position="Center">
                                                 <ui:CursorPosition.OffsetX>
@@ -466,13 +466,13 @@
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
-                                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,196.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                        <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="416,219.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Reference Instruction" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Reference Instruction" sap:VirtualizedContainerService.HintSize="353.6,130.4" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                                             <ui:Click.CursorPosition>
                                               <ui:CursorPosition Position="Center">
                                                 <ui:CursorPosition.OffsetX>
@@ -501,7 +501,7 @@
                                 </Catch>
                               </TryCatch.Catches>
                             </TryCatch>
-                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Upper Pane area" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Upper Pane area" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
                               <ui:Click.CursorPosition>
                                 <ui:CursorPosition OffsetX="[str_Xaxis+40]" OffsetY="[str_Yaxis]" Position="Center" />
                               </ui:Click.CursorPosition>
@@ -516,7 +516,7 @@
                                 </ui:Target>
                               </ui:Click.Target>
                             </ui:Click>
-                            <TryCatch DisplayName="Instruction" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                            <TryCatch DisplayName="Instruction" sap:VirtualizedContainerService.HintSize="353.6,76" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -597,9 +597,9 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:LogMessage DisplayName="Line Instruction log" sap:VirtualizedContainerService.HintSize="410.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Instruction# &quot;+Lines.Item(&quot;LineInstruction&quot;).ToString+&quot; added&quot;]" />
+                      <ui:LogMessage DisplayName="Line Instruction log" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Instruction# &quot;+Lines.Item(&quot;LineInstruction&quot;).ToString+&quot; added&quot;]" />
                     </Sequence>
-                    <Sequence DisplayName="Amount" sap:VirtualizedContainerService.HintSize="499.2,56.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                    <Sequence DisplayName="Amount" sap:VirtualizedContainerService.HintSize="512,56.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -723,7 +723,7 @@
                       </TryCatch>
                       <ui:LogMessage DisplayName="Line Amount log" sap:VirtualizedContainerService.HintSize="436.8,144" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Amount# &quot;+Lines.Item(&quot;LineAmount&quot;).ToString+&quot; added&quot;]" />
                     </Sequence>
-                    <uix:NMouseScroll KeyModifiers="{x:Null}" DelayAfter="3" Direction="Down" DisplayName="Mouse Scroll 'Page down'" sap:VirtualizedContainerService.HintSize="499.2,189.6" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="1" ScopeIdentifier="9b89d218-c771-4160-985b-df483ea957e4" Version="V3">
+                    <uix:NMouseScroll KeyModifiers="{x:Null}" DelayAfter="3" Direction="Down" DisplayName="Mouse Scroll 'Page down'" sap:VirtualizedContainerService.HintSize="512,189.6" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="1" ScopeIdentifier="9b89d218-c771-4160-985b-df483ea957e4" Version="V3">
                       <uix:NMouseScroll.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="1908, 538, 22, 422" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl automationid='NonClientVerticalScrollBar' idx='87' name='Vertical' role='scroll bar' /&gt;&lt;ctrl automationid='DownPageButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='NonClientVerticalScrollBar' name='Vertical' role='scroll bar' /&gt;&lt;ctrl automationid='DownPageButton' role='push button' check:text='Page down' /&gt;" Guid="cff3b335-39ad-4feb-bb09-4c4906654ef3" InformativeScreenshot="36fb3e610898aae15921a8f7499bf87f.png" ScopeSelectorArgument="&lt;wnd app='spreviewwizard.exe' ctrlname='SPVContainer' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Interactive" />
                       </uix:NMouseScroll.Target>
@@ -857,7 +857,7 @@
                       </ui:CommentOut>
                       <ui:LogMessage DisplayName="Gross Amount log" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Gross Amount# &quot;+Lines(&quot;GrossTotalAmount&quot;).ToString+&quot; added&quot;]" />
                     </Sequence>
-                    <Assign DisplayName="Increment X Axis" sap:VirtualizedContainerService.HintSize="499.2,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign DisplayName="Increment X Axis" sap:VirtualizedContainerService.HintSize="512,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">[str_Xaxis]</OutArgument>
                       </Assign.To>
@@ -865,7 +865,7 @@
                         <InArgument x:TypeArguments="x:Int32">[str_Xaxis+20]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <Assign DisplayName="Increment Y Axis" sap:VirtualizedContainerService.HintSize="449.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign DisplayName="Increment Y Axis" sap:VirtualizedContainerService.HintSize="512,107.2" sap2010:WorkflowViewState.IdRef="Assign_3">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">[str_Yaxis]</OutArgument>
                       </Assign.To>
