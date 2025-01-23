@@ -119,6 +119,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="GoSystem_Main" sap:VirtualizedContainerService.HintSize="1058.4,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">

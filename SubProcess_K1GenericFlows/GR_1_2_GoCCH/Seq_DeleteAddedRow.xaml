@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Seq_DeleteAddedRow" sap:VirtualizedContainerService.HintSize="998.4000000000001,596.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Seq_DeleteAddedRow" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -40,7 +40,6 @@
       <x:String>System.Net.Mail</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -120,35 +119,35 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_98">
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_98">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Delete added row" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" ScopeGuid="62f6161e-ae7a-4e7e-b664-a570e672d1e9" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Delete added row" sap:VirtualizedContainerService.HintSize="387.2,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_13" ScopeGuid="62f6161e-ae7a-4e7e-b664-a570e672d1e9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1118.4,1276" sap2010:WorkflowViewState.IdRef="Sequence_94">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_94">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="1056,1185.6" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:30">
+            <ui:RetryScope ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="3.00:00:00">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1014.4,904.8" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="416,24.8" sap2010:WorkflowViewState.IdRef="Sequence_97">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="952,225.6" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62f6161e-ae7a-4e7e-b664-a570e672d1e9" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'graphic'" sap:VirtualizedContainerService.HintSize="353.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="62f6161e-ae7a-4e7e-b664-a570e672d1e9" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable CVScreenId="c225899a-58e7-4afe-b1f0-9bb2e80335a3" CvElementArea="350, 585, 24, 24" CvTextArea="355, 590, 13, 12" CvType="Icon" DesignTimeRectangle="353, 588, 20, 20" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='K1ReClassTabItem' /&gt;&lt;ctrl idx='2' name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzyAccuracy="0.53" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl name='System.Data.DataRow' role='list item' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" Guid="8bef7e0b-ce0b-4985-87c0-f31eee8af6af" InformativeScreenshot="d8323b69d416d7f9844bc500000f0653.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (K1_KR_1901244988 (V1)) | 1040 | 2023 *' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -170,14 +169,14 @@
                       </uix:NClick.VerifyOptions>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NCheckState DisplayName="Check App State 'Do you'" sap:VirtualizedContainerService.HintSize="952,590.4" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="62f6161e-ae7a-4e7e-b664-a570e672d1e9" Timeout="10" Version="V3">
+                    <uix:NCheckState DisplayName="Check App State 'Do you'" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="62f6161e-ae7a-4e7e-b664-a570e672d1e9" Timeout="10" Version="V3">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,308.8" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,307.2" sap2010:WorkflowViewState.IdRef="Sequence_95">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -220,7 +219,7 @@
                       </uix:NCheckState.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -233,7 +232,7 @@
               </ui:RetryScope.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
