@@ -148,7 +148,7 @@
           <av:PointCollection x:Key="ConnectorLocation">685.2,183.4 685.2,213.4 710.5,213.4 710.5,267</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap2010:Annotation.AnnotationText="Read Input Data" DisplayName="Sequence- Initialize data" sap:VirtualizedContainerService.HintSize="688,1660" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence sap2010:Annotation.AnnotationText="Read Input Data" DisplayName="Sequence- Initialize data" sap:VirtualizedContainerService.HintSize="688,1773.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="TaxYear" />
         </Sequence.Variables>
@@ -176,14 +176,6 @@
                   <InArgument x:TypeArguments="x:String">["ID Created"]</InArgument>
                 </ui:FilterOperationArgument.Column>
               </ui:FilterOperationArgument>
-              <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-                <ui:FilterOperationArgument.Column>
-                  <InArgument x:TypeArguments="x:String">["Year"]</InArgument>
-                </ui:FilterOperationArgument.Column>
-                <ui:FilterOperationArgument.Operand>
-                  <InArgument x:TypeArguments="x:String">[TaxYear]</InArgument>
-                </ui:FilterOperationArgument.Operand>
-              </ui:FilterOperationArgument>
             </scg:List>
           </ui:FilterDataTable.Filters>
           <ui:FilterDataTable.SelectColumns>
@@ -192,6 +184,14 @@
             </scg:List>
           </ui:FilterDataTable.SelectColumns>
         </ui:FilterDataTable>
+        <Assign sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <Assign.To>
+            <OutArgument x:TypeArguments="sd:DataTable">[dt_ClientData]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="sd:DataTable">[dt_ClientData.Select("[Year]='"+TaxYear+"'").CopyToDataTable]</InArgument>
+          </Assign.Value>
+        </Assign>
         <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[int_IndexCount]" DataTable="[dt_ClientData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="625.6,803.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
           <ui:ForEachRow.Body>
             <ActivityAction x:TypeArguments="sd:DataRow">

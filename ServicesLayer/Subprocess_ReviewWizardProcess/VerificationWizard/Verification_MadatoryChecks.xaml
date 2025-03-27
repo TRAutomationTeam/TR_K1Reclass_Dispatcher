@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>998.4000000000001,4011.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>998.4000000000001,4574.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Verification_PreValidation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -120,7 +120,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Verification_PreValidation" sap:VirtualizedContainerService.HintSize="757.6,3946.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Verification_PreValidation" sap:VirtualizedContainerService.HintSize="757.6,4509.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Taxyear" />
       <Variable x:TypeArguments="x:String" Name="str_IdentificationNo" />
@@ -189,13 +189,13 @@
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="695.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Mandatory data selection - Tax Year | Identification No | Partner Name - &quot;+str_Taxyear+&quot; | &quot;+str_IdentificationNo+&quot; | &quot;+str_PartnerName]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1040SCAN : Verification (EngagementID : 33362127, Domain : Automation-01, SP Client" sap:VirtualizedContainerService.HintSize="695.2,3378.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="a8b1ac8c-4613-4ad9-b4dd-58ef3af59fef" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: 1040SCAN : Verification (EngagementID : 33362127, Domain : Automation-01, SP Client" sap:VirtualizedContainerService.HintSize="695.2,3941.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="a8b1ac8c-4613-4ad9-b4dd-58ef3af59fef" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="661.6,3064" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="661.6,3627.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="pageNo" />
             </Sequence.Variables>
@@ -262,7 +262,7 @@
               </uix:NClick.Target>
             </uix:NClick>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="599.2,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Tax Yr Selection - &quot;+str_Taxyear]" />
-            <Switch x:TypeArguments="x:String" DisplayName="Mandatory Filling" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="599.2,1075.2" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+            <Switch x:TypeArguments="x:String" DisplayName="Mandatory Filling" Expression="[in_TransactionItem.SpecificContent(&quot;EngagementType&quot;).ToString]" sap:VirtualizedContainerService.HintSize="599.2,1638.4" sap2010:WorkflowViewState.IdRef="Switch`1_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -292,17 +292,17 @@
                   </uix:NTypeInto.Target>
                 </uix:NTypeInto>
               </Sequence>
-              <Sequence x:Key="1041" sap:VirtualizedContainerService.HintSize="559.2,831.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence x:Key="1041" sap:VirtualizedContainerService.HintSize="559.2,1394.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="496.8,168.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_3" InteractionMode="HardwareEvents" MovementUnits="4" Version="V4" />
-                <Switch x:TypeArguments="x:String" DisplayName="State Selection" Expression="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,84.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                <Switch x:TypeArguments="x:String" DisplayName="State Selection" Expression="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,654.4" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -312,7 +312,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="State Selection" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="State Selection" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -324,23 +324,16 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53c3d24b-f562-4d56-b39b-0b4a0d60b70b" InformativeScreenshot="5d4661e6a6002e3f883322240a299ac5" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='83' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53c3d24b-f562-4d56-b39b-0b4a0d60b70b" InformativeScreenshot="5d4661e6a6002e3f883322240a299ac5" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='83' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" TimeoutMS="10">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="NY " sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="NY">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="NY " sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="NY">
                       <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b1698ed-07a3-4763-b081-7e25eb2f0e9c" InformativeScreenshot="8cf2684d93b621b6311b01d0e7badc4c" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='83' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" WaitForReady="NONE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b1698ed-07a3-4763-b081-7e25eb2f0e9c" InformativeScreenshot="8cf2684d93b621b6311b01d0e7badc4c" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='83' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" TimeoutMS="10" WaitForReady="NONE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
                   </Sequence>
@@ -350,7 +343,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="State Selection" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="State Selection" sap:VirtualizedContainerService.HintSize="353.6,139.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -362,23 +355,16 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53c3d24b-f562-4d56-b39b-0b4a0d60b70b" InformativeScreenshot="89a4cafbfe6128198bdf7b11a39fe005" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='65' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53c3d24b-f562-4d56-b39b-0b4a0d60b70b" InformativeScreenshot="89a4cafbfe6128198bdf7b11a39fe005" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='65' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" TimeoutMS="10">
                           <ui:Target.WaitForReady>
                             <InArgument x:TypeArguments="ui:WaitForReady" />
                           </ui:Target.WaitForReady>
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="NY " sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="NY">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ContinueOnError="True" DisplayName="NY " sap:VirtualizedContainerService.HintSize="353.6,180.8" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="NY">
                       <ui:TypeInto.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b1698ed-07a3-4763-b081-7e25eb2f0e9c" InformativeScreenshot="0dce221b838b0484f92970dd221871a9" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='65' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" WaitForReady="NONE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6b1698ed-07a3-4763-b081-7e25eb2f0e9c" InformativeScreenshot="0dce221b838b0484f92970dd221871a9" Selector="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.Window.*' idx='65' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" TimeoutMS="10" WaitForReady="NONE" />
                       </ui:TypeInto.Target>
                     </ui:TypeInto>
                   </Sequence>
@@ -388,7 +374,7 @@
                     <uix:TargetAnchorable DesignTimeRectangle="54, 711, 184, 30" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd aaname='8      Net short-term capital gain (loss)' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='pnlMain' /&gt;&lt;wnd ctrlname='pnlInputForm' /&gt;&lt;wnd ctrlname='UCSPVInputFormNew' /&gt;&lt;wnd ctrlname='SplitContainer1' /&gt;&lt;wnd aaname='Horizontal' cls='WindowsForms10.Window.*' /&gt;&lt;wnd aaname='8      Net short-term capital gain (loss)' cls='WindowsForms10.Window.*' /&gt;&lt;wnd cls='WindowsForms10.COMBOBOX.*' /&gt;" Guid="019eaaae-e6fb-413d-962b-e726d76e3245" InformativeScreenshot="5d36f7e1f067379a603c6b8b012ead5f.png" ScopeSelectorArgument="&lt;wnd app='spreviewwizard.exe' ctrlname='SPVContainer' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
                   </uix:NTypeInto.Target>
                 </uix:NTypeInto>
-                <Switch x:TypeArguments="x:String" DisplayName="Type Into 'F Partners name'" Expression="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,236.8" sap2010:WorkflowViewState.IdRef="Switch`1_4">
+                <Switch x:TypeArguments="x:String" DisplayName="Type Into 'F Partners name'" Expression="[in_TransactionItem.SpecificContent(&quot;TaxSoftware&quot;).ToString]" sap:VirtualizedContainerService.HintSize="496.8,230.4" sap2010:WorkflowViewState.IdRef="Switch`1_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
